@@ -1,0 +1,140 @@
+/* Theme adapted from your HTML snippet - place at src/components/LandingPageTheme.css */
+
+/* Root / page background */
+:root {
+  --bg: #081b29;
+  --card-bg: #112e42;
+  --muted: rgba(255,255,255,0.85);
+  --accent: #00fa9a;
+  --card-border: rgba(255,255,255,0.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Page container */
+.lp-root {
+  min-height: 100vh;
+  background: var(--bg);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.lp-header {
+  width: 100%;
+  max-width: 1200px;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lp-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lp-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.lp-logo-text {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.lp-animate { color: #ffd7f5; margin-left: 4px; }
+
+/* Nav */
+.lp-nav { display: flex; gap: 14px; align-items: center; }
+.lp-link {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.lp-link:hover { background: rgba(255,255,255,0.04); }
+.lp-link.active { background: rgba(255,255,255,0.06); }
+.lp-logout { color: var(--accent); font-weight: 600; }
+
+/* Main hero + preview layout */
+.lp-main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Hero */
+.lp-hero {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 36px;
+  color: var(--muted);
+}
+
+.lp-title {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.lp-sub {
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 22px;
+  line-height: 1.5;
+  max-width: 680px;
+}
+
+.lp-cta-group { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.lp-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lp-btn-primary {
+  background: #00c441;
+  color: #062017;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.lp-btn-primary:hover { filter: brightness(0.98); transform: translateY(-2px); }
+
+.lp-btn-outline {
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.95);
+  background: transparent;
+}
+
+/* Chat preview card (uses your original msger styles) */
+.lp-chat-preview .msger {
+  width: 100%;
+  max-width: 380px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border: 1p
+}
