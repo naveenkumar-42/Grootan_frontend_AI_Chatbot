@@ -19,9 +19,6 @@ export default function LandingHeader() {
         <a href="/ai-chat" className="nav-link">
           Chat
         </a>
-        <a href="/voicechat" className="nav-link">
-          Voice
-        </a>
         <a href="/contact" className="nav-link">
           Contact
         </a>
