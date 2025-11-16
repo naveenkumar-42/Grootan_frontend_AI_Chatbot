@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import LandingHeader from "../components/LandingHeader";
 
-/**
- * Contact.js
- * Simple contact page matching Grootan theme.
- * - Name, email, subject, message fields
- * - Basic validation
- * - Mock submit (replace with fetch/axios call to your backend)
- * - Internal CSS only
- */
+
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState({ state: "idle", msg: "" }); // idle | sending | success | error
-
+  const [status, setStatus] = useState({ state: "idle", msg: "" });
   function validate() {
     const e = {};
     if (!form.name.trim()) e.name = "Name is required.";
@@ -33,11 +25,7 @@ export default function Contact() {
     setStatus({ state: "sending", msg: "Sending…" });
 
     try {
-      // Replace this block with your real API call.
-      // Example:
-      // await fetch("/api/contact", { method: "POST", headers:{'Content-Type':'application/json'}, body: JSON.stringify(form) });
-
-      // Simulate network latency
+    
       await new Promise((res) => setTimeout(res, 800));
 
       setStatus({ state: "success", msg: "Thanks — your message has been sent. We'll get back to you soon!" });
