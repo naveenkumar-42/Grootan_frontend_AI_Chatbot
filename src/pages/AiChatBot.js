@@ -1,15 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import LandingHeader from "../components/LandingHeader";
 
-/**
- * AiChatBot.js — enhanced & interactive version
- * - New chat / Clear chat / Delete / Rename
- * - Typing indicator
- * - Attractive layout + subtle animations
- *
- * Place this file in src/pages/AiChatBot.js
- */
-
 export default function AiChatBot() {
   // conversations: { id, title, last, created, messages }
   const [conversations, setConversations] = useState(() => [
